@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import {
     addPostAction,
     addReplyAction
 } from './actions';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
+import MessageBoardAppComponent from './MessageBoardAppComponent';
 import { sortedPosts } from './selectors';
-
-import NavHeader from './NavHeader';
-import PostCollection from './PostCollection';
-import NewPostForm from './NewPostForm';
 
 
 class MessageBoardAppContainer extends Component {
 
     render() {
         return (
-            <div>
-              <NavHeader />
-              <PostCollection posts={this.props.posts} />
-              <NewPostForm createNewPost={this.props.addPost} />
-            </div>
+            <MessageBoardAppComponent posts={this.props.posts} addPost={this.props.addPost} />
         );
     }
 }
