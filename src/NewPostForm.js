@@ -8,6 +8,7 @@ class NewPostForm extends React.Component {
         let author = this.author.value;
         let text = this.text.value;
         this.props.createNewPost(title, author, text)
+        e.target.reset();
     }
 
     render () {
