@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class NewPostForm extends React.Component {
 
@@ -9,6 +10,8 @@ class NewPostForm extends React.Component {
         let text = this.text.value;
         this.props.createNewPost(title, author, text)
         e.target.reset();
+        const path = "/posts";
+        this.props.history.push(path);
     }
 
     render () {
@@ -26,4 +29,4 @@ class NewPostForm extends React.Component {
     }
 }
 
-export default NewPostForm;
+export default withRouter(NewPostForm);
