@@ -14,12 +14,13 @@ import NewPostForm from './NewPostForm';
 
 
 class MessageBoardAppContainer extends Component {
+
     render() {
         return (
             <div>
               <NavHeader />
               <PostCollection posts={this.props.posts} />
-              <NewPostForm />
+              <NewPostForm createNewPost={this.props.addPost} />
             </div>
         );
     }
