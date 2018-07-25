@@ -8,6 +8,8 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { sortedPosts } from './selectors';
+
 import NavHeader from './NavHeader';
 import PostCollection from './PostCollection';
 import NewPostForm from './NewPostForm';
@@ -29,7 +31,7 @@ class MessageBoardAppContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.posts
+        posts: sortedPosts(state)
     }
 }
 

@@ -15,7 +15,7 @@ const messageBoardReducer = (state = initialState, action) => {
         case ADD_POST:
 
             const newPost = {
-                id: state.posts.length,
+                id: state.posts.length + 1,
                 title: action.title,
                 author: action.author,
                 text: action.text,
