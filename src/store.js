@@ -1,2 +1,8 @@
-export const ADD_POST = 'ADD_POST';
-export const ADD_REPLY = 'ADD_REPLY';
+import { createStore } from 'redux';
+import messageBoardReducer from './reducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+
+let store = createStore(messageBoardReducer, composeWithDevTools());
+
+export default store;
