@@ -2,10 +2,11 @@ import {
     ADD_POST,
     ADD_REPLY
 } from './actions';
+import starterPosts from './data';
 
 
 const initialState = {
-    posts: []
+    posts: starterPosts
 }
 
 const messageBoardReducer = (state = initialState, action) => {
@@ -17,7 +18,8 @@ const messageBoardReducer = (state = initialState, action) => {
                 id: state.posts.length,
                 title: action.title,
                 author: action.author,
-                text: action.text
+                text: action.text,
+                replies: []
             }
 
             return {
