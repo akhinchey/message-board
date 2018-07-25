@@ -39,6 +39,7 @@ const messageBoardReducer = (state = initialState, action) => {
                 if (post.id === action.id) {
                     post.replies.push(newReply);
                 }
+                return post
             });
 
             return {

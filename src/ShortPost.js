@@ -1,10 +1,11 @@
 import React from 'react';
 
-const ShortPost = () => (
+const ShortPost = (props) => (
     <div>
-        <h2>Title</h2>
+        <h2>{props.title}</h2>
+        <h3>Author: {props.author}</h3>
         <p>
-            Here is some filler text
+            {props.text}
         </p>
     </div>
 )

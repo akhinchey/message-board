@@ -22,7 +22,7 @@ const starterPosts = [
     },
     {
         id: 4,
-        title: "",
+        title: "Please stop looking at your phone and pet me leave hair on owner's clothes cough",
         author: "Grumpy Cat",
         text: "Chase laser lie on your belly and purr when you are asleep experiences short bursts of poo-phoria after going to the loo, yet hiss and stare at nothing then run suddenly away. Take a big fluffing crap 💩 this cat happen now, it was too purr-fect!!!, present belly, scratch hand when stroked. Making sure that fluff gets into the owner's eyes spread kitty litter all over house intently stare at the same spot pee in the shoe. Stretch sleep everywhere, but not in my bed and warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats. Missing until dinner time nap all day, but kitty poochy.",
         replies: []

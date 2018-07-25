@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -19,7 +18,7 @@ class MessageBoardAppContainer extends Component {
         return (
             <div>
               <NavHeader />
-              <PostCollection />
+              <PostCollection posts={this.props.posts} />
               <NewPostForm />
             </div>
         );
@@ -34,10 +33,10 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+    return bindActionCreators({
         addPost: addPostAction,
         addReply: addReplyAction
-    }
+    }, dispatch)
 }
 
 const MessageBoardApp = connect(mapStateToProps, mapDispatchToProps)(MessageBoardAppContainer)
