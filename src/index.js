@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from "./store";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import MessageBoardApp from './MessageBoardApp';
+import MessageBoardApp from './components/MessageBoardApp';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(

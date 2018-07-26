@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+
 class NewPostForm extends React.Component {
 
     handleSubmit = (e) => {

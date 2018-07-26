@@ -5,7 +5,6 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
-
 import NavHeader from './NavHeader';
 import PostCollection from './PostCollection';
 import NewPostForm from './NewPostForm';

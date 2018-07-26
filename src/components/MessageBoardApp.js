@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
-import {
-    addPostAction,
-    addReplyAction
-} from './actions';
-
+import { addPostAction, addReplyAction } from '../actions';
 import MessageBoardAppComponent from './MessageBoardAppComponent';
-import { sortedPosts } from './selectors';
+import { sortedPosts } from '../selectors';
 
 
 class MessageBoardAppContainer extends Component {

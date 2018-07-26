@@ -1,6 +1,6 @@
 import React from 'react';
-
 import ShortPost from './ShortPost';
+
 
 const PostCollection = (props) => {
 
