@@ -32,7 +32,8 @@ class NewPostForm extends React.Component {
                         </div>
                         <div className="form-group short-field">
                             <label>Author * :</label>
-                            <input type="text" 
+                            <input type="text"
+                                   maxlength="50"
                                    required className="form-control"
                                    pattern="\S(.*\S)?"
                                    ref={ (input) => {this.author = input} }/>

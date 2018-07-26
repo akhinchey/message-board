@@ -18,15 +18,19 @@ class NewReplyForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Name * :</label>
-                        <input type="text" required className="form-control"
-                                                    pattern="\S(.*\S)?"
-                                                    ref={ (input) => {this.author = input} }/>
+                        <input type="text" required
+                                           maxlength="50"
+                                           className="form-control"
+                                           pattern="\S(.*\S)?"
+                                           ref={ (input) => {this.author = input} }/>
                     </div>
                     <div className="form-group">
                         <label>Reply * :</label>                
-                        <textarea required className="form-control"
-                                        pattern="\S(.*\S)?"
-                                        ref={ (input) => {this.text = input} } />
+                        <textarea required
+                                  maxlength="50"
+                                  className="form-control"
+                                  pattern="\S(.*\S)?"
+                                  ref={ (input) => {this.text = input} } />
                     </div>
                     <button className="btn btn-primary" type="submit">Reply</button>
                 </form>
