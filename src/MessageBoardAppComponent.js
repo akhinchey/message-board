@@ -20,7 +20,7 @@ class MessageBoardAppComponent extends React.Component {
                     <Switch>
                         <Route exact path="/posts" render={() => <PostCollection posts={this.props.posts} />} />
                         <Route path="/posts/new" render={() => <NewPostForm createNewPost={this.props.addPost} />} />
-                        <Redirect exact from='/' to='/posts'/>
+                        <Redirect exact from='/*' to='/posts'/>
                     </Switch>
                 </div>
             </BrowserRouter>
