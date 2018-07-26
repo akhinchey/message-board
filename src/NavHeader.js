@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const NavHeader = ({match}) => (
+const NavHeader = () => (
     <header>
         <ul>
             <li><NavLink to="/posts">Home</NavLink></li>
