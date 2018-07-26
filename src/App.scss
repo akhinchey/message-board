@@ -19,7 +19,11 @@ nav {
   float: left;
   padding: 0 20px;
   font-size: 25px;
-  color: $color-grey;
+
+  a {
+    color: $color-grey;
+    text-decoration: none;
+  }
 }
 
 .nav-tabs li a {
