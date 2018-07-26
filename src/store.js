@@ -1,8 +1,19 @@
 import { createStore } from 'redux';
-import messageBoardReducer from './reducer';
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import { composeWithDevTools } from 'redux-devtools-extension';
+import messageBoardReducer from './reducer';
 
 
-let store = createStore(messageBoardReducer, composeWithDevTools());
+const persistConfig = {
+  key: 'root',
+  storage,
+}
 
-export default store;
+const persistedReducer = persistReducer(persistConfig, messageBoardReducer)
+
+const store = createStore(persistedReducer, composeWithDevTools());
+const persistor = persistStore(store)
+
+export { store, persistor }
+
