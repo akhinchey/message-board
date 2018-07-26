@@ -17,7 +17,8 @@ class MessageBoardAppContainer extends Component {
     render() {
         return (
             <MessageBoardAppComponent posts={this.props.posts} 
-                                      addPost={this.props.addPost} />
+                                      addPost={this.props.addPost}
+                                      addReply={this.props.addReply} />
         );
     }
 }

@@ -7,7 +7,7 @@ class NewReplyForm extends React.Component {
         e.preventDefault();
         let author = this.author.value;
         let text = this.text.value;
-        this.props.addNewReply(author, text);
+        this.props.addNewReply(author, text, this.props.id);
         e.target.reset()
     }
 

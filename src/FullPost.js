@@ -1,6 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
+import NewReplyForm from './NewReplyForm';
+import Reply from './Reply';
+
 
 const FullPost = (props) => {
     const post = props.post;
@@ -9,23 +12,23 @@ const FullPost = (props) => {
 
     const replies = post.replies.map((reply, index) => {
         return (
-            <div>
-                <div>{reply.author} at {reply.date}</div>
-                <div>{reply.text}</div>
-            </div>
+            <Reply key={index} reply={reply} />
         )
     })
 
     return (
         <div>
-            <h2>{post.title}</h2>
-            <h3>Author: {post.author}</h3>
-            <span>{post.date}</span>
-            <br />
             <div>
-                {post.text}
+                <h2>{post.title}</h2>
+                <h3>Author: {post.author}</h3>
+                <span>{post.date}</span>
+                <br />
+                <div>
+                    {post.text}
+                </div>
             </div>
-            {replies}
+                <NewReplyForm id={post.id} addNewReply={props.addNewReply} />
+                {replies}
 
         </div>
     )

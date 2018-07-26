@@ -32,15 +32,14 @@ const messageBoardReducer = (state = initialState, action) => {
         case ADD_REPLY:
 
             const newReply = {
-                title: action.title,
                 author: action.author,
-                date: generateCurrentDate(),
                 text: action.text,
+                date: generateCurrentDate(),
                 postID: action.postID
             }
 
             const newPosts = state.posts.map((post) => {
-                if (post.id === action.id) {
+                if (post.id === action.postID) {
                     post.replies.push(newReply);
                 }
                 return post
