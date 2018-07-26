@@ -9,10 +9,8 @@ const PostCollection = (props) => {
     })
 
     return (
-        <div>
-            <ul>
-                {shortPosts}
-            </ul>
+        <div className="post-container">
+            {shortPosts}
         </div>
     )
 }

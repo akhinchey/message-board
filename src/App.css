@@ -1,8 +1,27 @@
 nav {
   margin-bottom: 20px; }
+  nav.nav {
+    display: inline-block; }
+
+.nav-title {
+  float: left;
+  padding: 0 20px;
+  font-size: 25px;
+  color: #aaa; }
 
 .nav-tabs li a {
   border-style: none;
   border-radius: 0; }
   .nav-tabs li a.active {
     background-color: #eee; }
+
+.post-container {
+  width: 85%;
+  margin: auto; }
+  .post-container .post-details {
+    color: #aaa; }
+    .post-container .post-details .author {
+      color: black; }
+
+.short-post-title {
+  font-size: 20px; }

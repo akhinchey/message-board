@@ -8,13 +8,14 @@ const ShortPost = (props) => {
     return (
         <div>
             <Link to={`posts/${post.id}`}>
-                <h2>{post.title}</h2>
-                <p>
-                    {post.text}
-                </p>
+                <h2 className="short-post-title">{post.title}</h2>
             </Link>
-            <div>Author: {post.author} at {post.date}</div>
-            <div>{post.replies.length} replies</div>
+
+            <div className="post-details">
+                Author: <span className="author">{post.author}</span> at {post.date}
+            </div>
+
+            <span className="label label-info">{post.replies.length} replies</span>
             <hr />
         </div>
     )

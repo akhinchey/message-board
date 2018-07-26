@@ -17,7 +17,7 @@ const FullPost = (props) => {
     })
 
     return (
-        <div>
+        <div className="post-container">
             <div>
                 <h2>{post.title}</h2>
                 <h3>Author: {post.author}</h3>
