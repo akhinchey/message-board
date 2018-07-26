@@ -1,12 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import PostNotFound from './PostNotFound';
+import { Redirect } from 'react-router-dom';
 
 
 const FullPost = (props) => {
     const post = props.post;
 
-    if (!post) return <Route component={PostNotFound} />
+    if (!post) return <Redirect to="/posts" />;
 
     return (
         <div>
