@@ -14,9 +14,9 @@ class NewReplyForm extends React.Component {
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="author" ref={ (input) => {this.author = input} }/>
+                <input type="text"  required pattern="\S+" placeholder="author" ref={ (input) => {this.author = input} }/>
                 <br />
-                <textarea placeholder="post" ref={ (input) => {this.text = input} } />
+                <textarea  required pattern="\S+" placeholder="post" ref={ (input) => {this.text = input} } />
                 <br />
                 <button type="submit">Reply</button>
             </form>
