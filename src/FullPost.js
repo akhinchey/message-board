@@ -30,6 +30,7 @@ const FullPost = (props) => {
             <div className="reply-section">
                 <h4 className="reply-header">Replies ({post.replies.length}):</h4>
                 {replies}
+                <br />
                 <NewReplyForm id={post.id} addNewReply={props.addNewReply} />
             </div>
 

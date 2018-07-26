@@ -20,7 +20,8 @@ nav {
 
 .post-container {
   width: 85%;
-  margin: auto; }
+  margin: auto;
+  margin-bottom: 50px; }
   .post-container .post-details {
     color: #888; }
   .post-container .reply-section {
@@ -69,8 +70,10 @@ label {
 
 @media (max-width: 768px) {
   .post-container {
-    background: red;
     width: 90%; }
+    .post-container .reply-section .reply-header, .post-container .post-title,
+    .post-container .page-title {
+      font-size: 17px; }
     .post-container .reply-section .reply-form, .post-container .post-form {
       width: 90%;
       margin: auto; }

@@ -34,6 +34,7 @@ nav {
 .post-container {
   width: 85%;
   margin: auto;
+  margin-bottom: 50px;  
   
   .post-details {
     color: $color-grey;
@@ -122,8 +123,12 @@ label {
 
 @media (max-width: 768px) {
   .post-container {
-    background: red;
     width: 90%;
+
+    .reply-section .reply-header, .post-title,
+    .page-title  {
+      font-size:17px;
+    }
 
     .reply-section .reply-form, .post-form {
       width: 90%;
