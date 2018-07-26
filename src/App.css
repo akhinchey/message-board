@@ -24,7 +24,7 @@ textarea {
     background-color: #eee; }
 
 .post-container {
-  width: 85%;
+  width: 80%;
   margin: auto;
   margin-bottom: 50px; }
   .post-container .post-details {
@@ -61,7 +61,7 @@ textarea {
     .post-container .post-form .form-group.short-field {
       float: left;
       margin-right: 10px;
-      width: 35%; }
+      width: 40%; }
     .post-container .post-form .form-group.text-area {
       clear: left; }
 
