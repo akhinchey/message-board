@@ -15,7 +15,7 @@ import FullPost from './FullPost';
 class MessageBoardAppComponent extends React.Component {
 
     getCurrentPost = (id) => {
-        return this.props.posts.find(post => post.id === parseInt(id));
+        return this.props.posts.find(post => post.id === parseInt(id, 10));
     }
 
     render() {
