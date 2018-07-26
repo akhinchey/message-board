@@ -16,18 +16,16 @@ class NewReplyForm extends React.Component {
             <div className="reply-form">
             <h5 className="reply-form-title">Add Reply:</h5>
                 <form onSubmit={this.handleSubmit}>
-                    <div class="form-group">
-                        <label for="name">Name * :</label>
-                        <input type="text" required class="form-control"
-                                                    id="name" placeholder="Name"
+                    <div className="form-group">
+                        <label>Name * :</label>
+                        <input type="text" required className="form-control"
                                                     pattern="\S(.*\S)?"
                                                     ref={ (input) => {this.author = input} }/>
                     </div>
-                    <div class="form-group">
-                        <label for="name">Reply * :</label>                
-                        <textarea required class="form-control"
+                    <div className="form-group">
+                        <label>Reply * :</label>                
+                        <textarea required className="form-control"
                                         pattern="\S(.*\S)?"
-                                        placeholder="Reply"
                                         ref={ (input) => {this.text = input} } />
                     </div>
                     <button className="btn btn-primary" type="submit">Reply</button>

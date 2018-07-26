@@ -18,36 +18,36 @@ class NewPostForm extends React.Component {
     render () {
         return (
             <div className="post-container">
-            <div className="post-form">
-                <h3 className="page-title">Add A New Post</h3>
-                <form onSubmit={this.handleSubmit}>
-                    <div class="form-group short-field">
-                        <label for="title">Title * :</label>
-                        <input type="text" required class="form-control"
-                                                    id="title"
-                                                    placeholder="Post Title"
-                                                    pattern="\S(.*\S)?"
-                                                    ref={ (input) => {this.title = input} }/>
-                    </div>
-                    <div class="form-group short-field">
-                        <label for="name">Author * :</label>
-                        <input type="text" required class="form-control"
-                                                    id="author"
-                                                    placeholder="author"
-                                                    pattern="\S(.*\S)?"
-                                                    ref={ (input) => {this.author = input} }/>
-                    </div>
-                    <div class="form-group text-area">
-                        <label for="name">Reply * :</label>                
-                        <textarea required class="form-control"
-                                           rows="4"
-                                           pattern="\S(.*\S)?"
-                                           placeholder="Reply"
-                                           ref={ (input) => {this.text = input} } />
-                    </div>
-                    <button className="btn btn-primary" type="submit">Add New Post</button>
-                </form>
-            </div>
+                <div className="post-form">
+
+                    <h3 className="page-title">Add A New Post</h3>
+
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group short-field">
+                            <label>Title * :</label>
+                            <input type="text"
+                                   required className="form-control"
+                                   pattern="\S(.*\S)?"
+                                   ref={ (input) => {this.title = input} }/>
+                        </div>
+                        <div className="form-group short-field">
+                            <label>Author * :</label>
+                            <input type="text" 
+                                   required className="form-control"
+                                   pattern="\S(.*\S)?"
+                                   ref={ (input) => {this.author = input} }/>
+                        </div>
+                        <div className="form-group text-area">
+                            <label>Post * :</label>                
+                            <textarea required 
+                                      className="form-control"
+                                      rows="4"
+                                      pattern="\S(.*\S)?"
+                                      ref={ (input) => {this.text = input} } />
+                        </div>
+                        <button className="btn btn-primary" type="submit">Add New Post</button>
+                    </form>
+                </div>
             </div>
         )
     }

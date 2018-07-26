@@ -21,8 +21,7 @@ class MessageBoardAppComponent extends React.Component {
     render() {
         return (
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
-            <ScrollToTop>
-                <div>
+                <ScrollToTop>
                     <NavHeader />
                     <Switch>
                         <Route exact path="/posts" render={() => <PostCollection posts={this.props.posts} />} />
@@ -31,8 +30,7 @@ class MessageBoardAppComponent extends React.Component {
                                                                               addNewReply={this.props.addReply} />} />
                         <Redirect exact from='/*' to='/posts'/>
                     </Switch>
-                </div>
-            </ScrollToTop>
+                </ScrollToTop>
             </BrowserRouter>
         );
     }
