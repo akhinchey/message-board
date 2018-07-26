@@ -10,6 +10,7 @@ import NavHeader from './NavHeader';
 import PostCollection from './PostCollection';
 import NewPostForm from './NewPostForm';
 import FullPost from './FullPost';
+import ScrollToTop from './ScrollToTop';
 
 
 class MessageBoardAppComponent extends React.Component {
@@ -21,6 +22,7 @@ class MessageBoardAppComponent extends React.Component {
     render() {
         return (
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+            <ScrollToTop>
                 <div>
                     <NavHeader />
                     <Switch>
@@ -31,6 +33,7 @@ class MessageBoardAppComponent extends React.Component {
                         <Redirect exact from='/*' to='/posts'/>
                     </Switch>
                 </div>
+            </ScrollToTop>
             </BrowserRouter>
         );
     }
