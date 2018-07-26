@@ -9,9 +9,15 @@ import {
 import NavHeader from './NavHeader';
 import PostCollection from './PostCollection';
 import NewPostForm from './NewPostForm';
+import FullPost from './FullPost';
 
 
 class MessageBoardAppComponent extends React.Component {
+
+    getCurrentPost = (id) => {
+        return this.props.posts.find(post => post.id === parseInt(id));
+    }
+
     render() {
         return (
             <BrowserRouter>
@@ -19,7 +25,9 @@ class MessageBoardAppComponent extends React.Component {
                     <NavHeader />
                     <Switch>
                         <Route exact path="/posts" render={() => <PostCollection posts={this.props.posts} />} />
-                        <Route path="/posts/new" render={() => <NewPostForm createNewPost={this.props.addPost} />} />
+                        <Route path="/posts/new" render={() => <NewPostForm addNewPost={this.props.addPost} />} />
+                        <Route path="/posts/:id" render={(props) => <FullPost post={this.getCurrentPost(props.match.params.id)}
+                                                                              addNewReply={this.props.addReply} />} />
                         <Redirect exact from='/*' to='/posts'/>
                     </Switch>
                 </div>
