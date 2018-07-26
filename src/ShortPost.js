@@ -12,7 +12,7 @@ const ShortPost = (props) => {
             </Link>
 
             <div className="post-details">
-                Author: <span className="post-author">{post.author}</span> at {post.date}
+                Author: <span className="bold-text">{post.author}</span> at {post.date}
             </div>
 
             <span className="label label-info">{post.replies.length} replies</span>

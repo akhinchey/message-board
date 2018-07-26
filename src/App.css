@@ -23,22 +23,58 @@ nav {
   margin: auto; }
   .post-container .post-details {
     color: #888; }
-    .post-container .post-details .post-author {
-      color: black;
-      font-weight: 500; }
-  .post-container .post-title {
+  .post-container .reply-section {
+    background: #eee;
+    padding: 20px;
+    margin-bottom: 50px; }
+    .post-container .reply-section .reply-header {
+      color: #888; }
+    .post-container .reply-section .reply {
+      border-bottom: 1px solid #ccc;
+      color: #888;
+      padding: 20px 0; }
+      .post-container .reply-section .reply .reply-text {
+        color: black; }
+    .post-container .reply-section .reply-form {
+      width: 500px;
+      margin-bottom: 50px; }
+      .post-container .reply-section .reply-form .reply-form-title {
+        color: #888; }
+  .post-container .post-title, .post-container .page-title {
     font-size: 20px; }
+  .post-container .page-title {
+    color: #888;
+    padding-bottom: 10px; }
   .post-container .full-post .post-title {
     color: #888; }
   .post-container .full-post .post-text {
-    padding: 20px 0; }
-  .post-container .reply-form {
-    width: 500px;
-    margin-bottom: 50px; }
+    padding: 20px 0 40px; }
+  .post-container .post-form {
+    width: 70%;
+    margin: auto; }
+    .post-container .post-form .form-group.short-field {
+      float: left;
+      margin-right: 10px;
+      width: 35%; }
+    .post-container .post-form .form-group.text-area {
+      clear: left; }
+
+label {
+  font-weight: normal;
+  color: #888; }
+
+.bold-text {
+  color: black;
+  font-weight: 500; }
 
 @media (max-width: 768px) {
   .post-container {
     background: red;
     width: 90%; }
-    .post-container .reply-form {
+    .post-container .reply-section .reply-form, .post-container .post-form {
+      width: 90%;
+      margin: auto; }
+    .post-container .post-form .form-group.short-field {
+      float: none;
+      margin-right: 0;
       width: 100%; } }

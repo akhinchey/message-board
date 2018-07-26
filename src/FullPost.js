@@ -21,16 +21,17 @@ const FullPost = (props) => {
             <div className="full-post">
                 <h2 className="post-title">{post.title}</h2>
                 <div className="post-details">
-                    Author: <span className="post-author">{post.author}</span> at {post.date}
+                    Author: <span className="bold-text">{post.author}</span> at {post.date}
                 </div>
                 <div className="post-text">
                     {post.text}
                 </div>
-                <hr />
             </div>
-            
-            {replies}
-            <NewReplyForm id={post.id} addNewReply={props.addNewReply} />
+            <div className="reply-section">
+                <h4 className="reply-header">Replies ({post.replies.length}):</h4>
+                {replies}
+                <NewReplyForm id={post.id} addNewReply={props.addNewReply} />
+            </div>
 
         </div>
     )

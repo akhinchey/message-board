@@ -2,9 +2,9 @@ import React from 'react';
 
 
 const Reply = (props) => (
-    <div>
-        <div>{props.reply.author} at {props.reply.date}</div>
-        <div>{props.reply.text}</div>
+    <div className="reply">
+        <div><span className="bold-text">{props.reply.author}</span> at {props.reply.date}</div>
+        <div className="reply-text">{props.reply.text}</div>
     </div>
 );
 

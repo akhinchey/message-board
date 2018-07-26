@@ -1,4 +1,7 @@
 $color-grey: #888;
+$color-med-grey: #ccc;
+$color-light-grey: #eee;
+
 
 a, a:hover {
   text-decoration: none;
@@ -24,7 +27,7 @@ nav {
   border-radius: 0;
 
   &.active {
-    background-color: #eee;
+    background-color: $color-light-grey;
   }
 }
 
@@ -34,30 +37,85 @@ nav {
   
   .post-details {
     color: $color-grey;
+  }
 
-    .post-author {
-      color: black;
-      font-weight: 500;
+  .reply-section {
+    background: $color-light-grey;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    .reply-header {
+      color: $color-grey;
+    }
+
+    .reply {
+      border-bottom: 1px solid $color-med-grey;
+      color: $color-grey;
+      padding: 20px 0;
+
+      .reply-text {
+        color: black;
+      }
+    }
+
+    .reply-form {
+      width: 500px;
+      margin-bottom: 50px;
+
+      .reply-form-title {
+        color: $color-grey;
+      }
     }
   }
 
-  .post-title {
+  .post-title, .page-title {
     font-size: 20px;
   }
+
+  .page-title {
+    color: $color-grey;
+    padding-bottom: 10px;
+  }
+
   .full-post {
+
     .post-title {
       color: $color-grey;
     }
 
     .post-text {
-      padding: 20px 0;
+      padding: 20px 0 40px;
     }
   }
 
-  .reply-form {
-    width: 500px;
-    margin-bottom: 50px;
+  .post-form {
+    width: 70%;
+    margin: auto;
+
+    .form-group {
+
+      
+      &.short-field {
+        float: left;
+        margin-right: 10px;
+        width: 35%;
+      }
+      
+      &.text-area {
+        clear: left
+      }
+    }
   }
+}
+
+label {
+  font-weight: normal;
+  color: $color-grey;
+}
+
+.bold-text {
+  color: black;
+  font-weight: 500;
 }
 
 
@@ -67,8 +125,20 @@ nav {
     background: red;
     width: 90%;
 
-    .reply-form {
-      width: 100%;
+    .reply-section .reply-form, .post-form {
+      width: 90%;
+      margin: auto;
+    }
+
+    .post-form {
+      .form-group {
+        &.short-field {
+          float: none;
+          margin-right: 0;
+          width: 100%
+        }
+
+      }
     }
   }
 }

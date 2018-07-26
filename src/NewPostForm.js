@@ -17,31 +17,36 @@ class NewPostForm extends React.Component {
     render () {
         return (
             <div className="post-container">
-                <h3>Add A New Post</h3>
+            <div className="post-form">
+                <h3 className="page-title">Add A New Post</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <div class="form-group">
+                    <div class="form-group short-field">
                         <label for="title">Title * :</label>
                         <input type="text" required class="form-control"
-                                                    id="title" placeholder="Post Title"
+                                                    id="title"
+                                                    placeholder="Post Title"
                                                     pattern="\S(.*\S)?"
                                                     ref={ (input) => {this.title = input} }/>
                     </div>
-                    <div class="form-group">
-                        <label for="name">Name * :</label>
+                    <div class="form-group short-field">
+                        <label for="name">Author * :</label>
                         <input type="text" required class="form-control"
-                                                    id="name" placeholder="Name"
+                                                    id="author"
+                                                    placeholder="author"
                                                     pattern="\S(.*\S)?"
                                                     ref={ (input) => {this.author = input} }/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group text-area">
                         <label for="name">Reply * :</label>                
                         <textarea required class="form-control"
-                                        pattern="\S(.*\S)?"
-                                        placeholder="Reply"
-                                        ref={ (input) => {this.text = input} } />
+                                           rows="4"
+                                           pattern="\S(.*\S)?"
+                                           placeholder="Reply"
+                                           ref={ (input) => {this.text = input} } />
                     </div>
                     <button className="btn btn-primary" type="submit">Add New Post</button>
                 </form>
+            </div>
             </div>
         )
     }

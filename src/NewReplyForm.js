@@ -14,6 +14,7 @@ class NewReplyForm extends React.Component {
     render () {
         return (
             <div className="reply-form">
+            <h5 className="reply-form-title">Add Reply:</h5>
                 <form onSubmit={this.handleSubmit}>
                     <div class="form-group">
                         <label for="name">Name * :</label>
