@@ -1,3 +1,6 @@
+a, a:hover {
+  text-decoration: none; }
+
 nav {
   margin-bottom: 20px; }
   nav.nav {
@@ -7,7 +10,7 @@ nav {
   float: left;
   padding: 0 20px;
   font-size: 25px;
-  color: #aaa; }
+  color: #888; }
 
 .nav-tabs li a {
   border-style: none;
@@ -19,9 +22,13 @@ nav {
   width: 85%;
   margin: auto; }
   .post-container .post-details {
-    color: #aaa; }
-    .post-container .post-details .author {
-      color: black; }
-
-.short-post-title {
-  font-size: 20px; }
+    color: #888; }
+    .post-container .post-details .post-author {
+      color: black;
+      font-weight: 500; }
+  .post-container .post-title {
+    font-size: 20px; }
+  .post-container .full-post .post-title {
+    color: #888; }
+  .post-container .full-post .post-text {
+    padding: 20px 0; }

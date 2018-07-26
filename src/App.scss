@@ -1,4 +1,8 @@
-$color-grey-text: #aaa;
+$color-grey: #888;
+
+a, a:hover {
+  text-decoration: none;
+}
 
 nav {
   margin-bottom: 20px;
@@ -12,7 +16,7 @@ nav {
   float: left;
   padding: 0 20px;
   font-size: 25px;
-  color: $color-grey-text;
+  color: $color-grey;
 }
 
 .nav-tabs li a {
@@ -29,16 +33,27 @@ nav {
   margin: auto;
   
   .post-details {
-    color: $color-grey-text;
+    color: $color-grey;
 
-    .author {
+    .post-author {
       color: black;
+      font-weight: 500;
+    }
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+  .full-post {
+    .post-title {
+      color: $color-grey;
+    }
+
+    .post-text {
+      padding: 20px 0;
     }
   }
 }
 
 
-.short-post-title {
-  font-size: 20px;
-}
 

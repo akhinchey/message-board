@@ -18,12 +18,12 @@ const FullPost = (props) => {
 
     return (
         <div className="post-container">
-            <div>
-                <h2>{post.title}</h2>
-                <h3>Author: {post.author}</h3>
-                <span>{post.date}</span>
-                <br />
-                <div>
+            <div className="full-post">
+                <h2 className="post-title">{post.title}</h2>
+                <div className="post-details">
+                    Author: <span className="post-author">{post.author}</span> at {post.date}
+                </div>
+                <div className="post-text">
                     {post.text}
                 </div>
             </div>

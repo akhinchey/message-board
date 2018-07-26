@@ -18,13 +18,13 @@ class NewPostForm extends React.Component {
         return (
             <div className="post-container">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" required pattern="\S+" placeholder="title" ref={ (input) => {this.title = input} }/>
+                    <input type="text" required pattern="\S(.*\S)?" placeholder="title" ref={ (input) => {this.title = input} }/>
                     <br />
-                    <input type="text" required pattern="\S+" placeholder="author" ref={ (input) => {this.author = input} }/>
+                    <input type="text" required pattern="\S(.*\S)?" placeholder="author" ref={ (input) => {this.author = input} }/>
                     <br />
                     <textarea required pattern="\S+" placeholder="post" ref={ (input) => {this.text = input} } />
                     <br />
-                    <button type="submit">Add New Post</button>
+                    <button className="btn btn-primary" type="submit">Add New Post</button>
                 </form>
 
             </div>
