@@ -7,6 +7,15 @@ const FullPost = (props) => {
 
     if (!post) return <Redirect to="/posts" />;
 
+    const replies = post.replies.map((reply, index) => {
+        return (
+            <div>
+                <div>{reply.author} at {reply.date}</div>
+                <div>{reply.text}</div>
+            </div>
+        )
+    })
+
     return (
         <div>
             <h2>{post.title}</h2>
@@ -16,6 +25,8 @@ const FullPost = (props) => {
             <div>
                 {post.text}
             </div>
+            {replies}
+
         </div>
     )
 }
