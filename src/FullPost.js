@@ -26,9 +26,11 @@ const FullPost = (props) => {
                 <div className="post-text">
                     {post.text}
                 </div>
+                <hr />
             </div>
-                <NewReplyForm id={post.id} addNewReply={props.addNewReply} />
-                {replies}
+            
+            {replies}
+            <NewReplyForm id={post.id} addNewReply={props.addNewReply} />
 
         </div>
     )

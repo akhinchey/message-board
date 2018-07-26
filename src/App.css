@@ -32,3 +32,13 @@ nav {
     color: #888; }
   .post-container .full-post .post-text {
     padding: 20px 0; }
+  .post-container .reply-form {
+    width: 500px;
+    margin-bottom: 50px; }
+
+@media (max-width: 768px) {
+  .post-container {
+    background: red;
+    width: 90%; }
+    .post-container .reply-form {
+      width: 100%; } }

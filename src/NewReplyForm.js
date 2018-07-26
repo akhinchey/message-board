@@ -13,21 +13,25 @@ class NewReplyForm extends React.Component {
 
     render () {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div class="form-group">
-                    <label for="name">Name * :</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name" pattern="\S(.*\S)?" ref={ (input) => {this.author = input} }/>
-                </div>
-                {/* <input type="text"  required pattern="\S+" placeholder="author" ref={ (input) => {this.author = input} }/>
-                <br /> */}
-                <div class="form-group">
-                    <label for="name">Reply * :</label>                
-                    <textarea class="form-control" rows="3" required pattern="\S(.*\S)?" placeholder="Reply" ref={ (input) => {this.text = input} }></textarea>
-                </div>
-                {/* <textarea  required pattern="\S+" placeholder="post" ref={ (input) => {this.text = input} } /> */}
-                <br />
-                <button className="btn btn-primary" type="submit">Reply</button>
-            </form>
+            <div className="reply-form">
+                <form onSubmit={this.handleSubmit}>
+                    <div class="form-group">
+                        <label for="name">Name * :</label>
+                        <input type="text" required class="form-control"
+                                                    id="name" placeholder="Name"
+                                                    pattern="\S(.*\S)?"
+                                                    ref={ (input) => {this.author = input} }/>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Reply * :</label>                
+                        <textarea required class="form-control"
+                                        pattern="\S(.*\S)?"
+                                        placeholder="Reply"
+                                        ref={ (input) => {this.text = input} } />
+                    </div>
+                    <button className="btn btn-primary" type="submit">Reply</button>
+                </form>
+            </div>
         )
     }
 }
