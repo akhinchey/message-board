@@ -2,7 +2,9 @@ import {
     ADD_POST,
     ADD_REPLY
 } from './actions';
+
 import starterPosts from './data';
+import generateCurrentDate from './utils';
 
 
 const initialState = {
@@ -18,6 +20,7 @@ const messageBoardReducer = (state = initialState, action) => {
                 id: state.posts.length + 1,
                 title: action.title,
                 author: action.author,
+                date: generateCurrentDate(),
                 text: action.text,
                 replies: []
             }
@@ -31,6 +34,7 @@ const messageBoardReducer = (state = initialState, action) => {
             const newReply = {
                 title: action.title,
                 author: action.author,
+                date: generateCurrentDate(),
                 text: action.text,
                 postID: action.postID
             }

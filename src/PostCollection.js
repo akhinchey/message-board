@@ -5,10 +5,7 @@ import ShortPost from './ShortPost';
 const PostCollection = (props) => {
 
     const shortPosts = props.posts.map((post, index) => {
-        return <ShortPost key={index}
-                          title={post.title}
-                          author={post.author}
-                          text={post.text} />
+        return <ShortPost key={index} post={post} />
     })
 
     return (
