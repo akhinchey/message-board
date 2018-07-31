@@ -47,7 +47,7 @@ class NewPostForm extends React.Component {
                                       ref={ (input) => {this.text = input} } />
                         </div>
                         <div className="new-post-button-section">
-                            <Link to="/">
+                            <Link to="/posts">
                                 <button className="btn btn-primary cancel">Cancel</button>
                             </Link>
                             <button className="btn btn-primary add-post" type="submit">Add New Post</button>

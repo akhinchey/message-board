@@ -28,7 +28,7 @@ const ShortPost = (props) => {
                     </span>
                 </div>
             </div>
-            <div class="icon">
+            <div className="icon">
             <Link to={`posts/${post.id}`}>
                 <span className="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
             </Link>

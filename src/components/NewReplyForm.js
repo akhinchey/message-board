@@ -16,23 +16,29 @@ class NewReplyForm extends React.Component {
             <div className="reply-form">
             <h5 className="reply-form-title">Add Reply:</h5>
                 <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
-                        <label>Name * :</label>
-                        <input type="text" required
-                                           maxlength="50"
-                                           className="form-control"
-                                           pattern="\S(.*\S)?"
-                                           ref={ (input) => {this.author = input} }/>
+
+                    <div className="reply-form-fields">
+                        <div className="form-group">
+                            <label>Name * :</label>
+                            <input type="text" required
+                                            maxLength="50"
+                                            className="form-control"
+                                            pattern="\S(.*\S)?"
+                                            ref={ (input) => {this.author = input} }/>
+                        </div>
+                        <div className="form-group">
+                            <label>Reply * :</label>                
+                            <textarea required
+                                    maxLength="50"
+                                    className="form-control"
+                                    pattern="\S(.*\S)?"
+                                    ref={ (input) => {this.text = input} } />
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label>Reply * :</label>                
-                        <textarea required
-                                  maxlength="50"
-                                  className="form-control"
-                                  pattern="\S(.*\S)?"
-                                  ref={ (input) => {this.text = input} } />
+
+                    <div className="reply-button">
+                        <button className="btn btn-primary" type="submit">Post Reply</button>
                     </div>
-                    <button className="btn btn-primary" type="submit">Reply</button>
                 </form>
             </div>
         )

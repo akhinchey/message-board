@@ -62,10 +62,17 @@ textarea {
     color: $color-grey;
   }
 
-  .reply-section {
-    background: $color-light-grey;
+  .full-post-container {
     padding: 20px;
-    margin-bottom: 50px;
+
+    .bottom-button-section {
+      display: none;
+    }
+  }
+
+  .reply-section {
+    padding: 20px;
+    // margin-bottom: 50px;
 
     .reply-header {
       color: $color-grey;
@@ -81,13 +88,27 @@ textarea {
       }
     }
 
-    .reply-form {
-      width: 500px;
-      margin-bottom: 50px;
+  }
 
-      .reply-form-title {
-        color: $color-grey;
-      }
+  .reply-form {
+
+    .reply-form-title {
+      color: $color-grey;
+    }
+
+    .reply-form-fields {
+      width: 70%;
+      display: inline-block;
+    }
+
+    .reply-button {
+      width: 30%;
+      display: inline-block;
+      text-align: center;
+
+        button {
+          width: 70%;
+        }
     }
   }
 
@@ -107,9 +128,20 @@ textarea {
 
   .full-post {
 
-    .post-title {
-      color: $color-grey;
+    .post-title-container {
+      .post-title {
+        color: $color-grey;
+        margin-top: 0;
+        width: 75%;
+        display: inline-block;
+      }
+
+      .top-back-button {
+        float: right;
+      }
+
     }
+
 
     .post-text {
       padding: 20px 0 40px;
@@ -189,13 +221,19 @@ label {
 
 
     .reply-section .reply-header,
-    .page-title  {
+    .page-title, .post-title  {
       font-size: 20px;
     }
 
-    .reply-section .reply-form {
-      width: 90%;
-      margin: auto;
+    .reply-form {
+      .reply-form-fields, .reply-button {
+        display: block;
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
     }
 
     .post-form {
@@ -217,6 +255,32 @@ label {
 
       }
     }
+
+    .full-post-container {
+
+      .full-post {
+        .post-title-container {
+
+          .post-title {
+            width: 100%;
+          }
+          .top-back-button {
+            display: none;
+          }
+        }
+      }
+
+      .bottom-button-section {
+        display: block;
+        text-align: center;
+
+        .bottom-back-button {
+          width: 100%;
+        }
+      }
+
+    }
+
   }
 }
 

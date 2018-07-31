@@ -34,10 +34,12 @@ textarea {
       text-overflow: ellipsis; }
   .post-container .post-details {
     color: #888; }
+  .post-container .full-post-container {
+    padding: 20px; }
+    .post-container .full-post-container .bottom-button-section {
+      display: none; }
   .post-container .reply-section {
-    background: #eee;
-    padding: 20px;
-    margin-bottom: 50px; }
+    padding: 20px; }
     .post-container .reply-section .reply-header {
       color: #888; }
     .post-container .reply-section .reply {
@@ -46,11 +48,17 @@ textarea {
       padding: 20px 0; }
       .post-container .reply-section .reply .reply-text {
         color: black; }
-    .post-container .reply-section .reply-form {
-      width: 500px;
-      margin-bottom: 50px; }
-      .post-container .reply-section .reply-form .reply-form-title {
-        color: #888; }
+  .post-container .reply-form .reply-form-title {
+    color: #888; }
+  .post-container .reply-form .reply-form-fields {
+    width: 70%;
+    display: inline-block; }
+  .post-container .reply-form .reply-button {
+    width: 30%;
+    display: inline-block;
+    text-align: center; }
+    .post-container .reply-form .reply-button button {
+      width: 70%; }
   .post-container .post-title.list {
     font-size: 20px;
     margin: 0;
@@ -59,8 +67,13 @@ textarea {
     color: #888;
     padding-bottom: 10px;
     text-align: center; }
-  .post-container .full-post .post-title {
-    color: #888; }
+  .post-container .full-post .post-title-container .post-title {
+    color: #888;
+    margin-top: 0;
+    width: 75%;
+    display: inline-block; }
+  .post-container .full-post .post-title-container .top-back-button {
+    float: right; }
   .post-container .full-post .post-text {
     padding: 20px 0 40px; }
   .post-container .post-form {
@@ -100,11 +113,13 @@ label {
         .post-container .short-post-container .details .post-details .post-time {
           display: none; }
     .post-container .reply-section .reply-header,
-    .post-container .page-title {
+    .post-container .page-title, .post-container .post-title {
       font-size: 20px; }
-    .post-container .reply-section .reply-form {
-      width: 90%;
-      margin: auto; }
+    .post-container .reply-form .reply-form-fields, .post-container .reply-form .reply-button {
+      display: block;
+      width: 100%; }
+      .post-container .reply-form .reply-form-fields button, .post-container .reply-form .reply-button button {
+        width: 100%; }
     .post-container .post-form .form-group {
       text-align: center; }
     .post-container .post-form .new-post-button-section {
@@ -113,4 +128,13 @@ label {
         float: left; }
       .post-container .post-form .new-post-button-section button.add-post {
         margin: 0;
-        float: right; } }
+        float: right; }
+    .post-container .full-post-container .full-post .post-title-container .post-title {
+      width: 100%; }
+    .post-container .full-post-container .full-post .post-title-container .top-back-button {
+      display: none; }
+    .post-container .full-post-container .bottom-button-section {
+      display: block;
+      text-align: center; }
+      .post-container .full-post-container .bottom-button-section .bottom-back-button {
+        width: 100%; } }
