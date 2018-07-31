@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ShortPost from './ShortPost';
 
 
@@ -10,8 +11,14 @@ const PostCollection = (props) => {
 
     return (
         <div className="post-container">
-        <h1 className="page-title">Message Board</h1>
+            <h1 className="page-title">Message Board</h1>
             {shortPosts}
+
+            <div className="new-post-button-section">
+                <Link to="/posts/new">
+                    <span className="btn btn-primary">Add New Post</span>
+                </Link>
+            </div>
         </div>
     )
 }

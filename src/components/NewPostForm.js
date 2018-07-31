@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 
 class NewPostForm extends React.Component {
@@ -20,17 +20,17 @@ class NewPostForm extends React.Component {
             <div className="post-container">
                 <div className="post-form">
 
-                    <h3 className="page-title">Add A New Post</h3>
+                    <h1 className="page-title">Add A New Post</h1>
 
                     <form onSubmit={this.handleSubmit}>
-                        <div className="form-group short-field">
+                        <div className="form-group">
                             <label>Title * :</label>
                             <input type="text"
                                    required className="form-control"
                                    pattern="\S(.*\S)?"
                                    ref={ (input) => {this.title = input} }/>
                         </div>
-                        <div className="form-group short-field">
+                        <div className="form-group">
                             <label>Author * :</label>
                             <input type="text"
                                    maxlength="50"
@@ -46,7 +46,12 @@ class NewPostForm extends React.Component {
                                       pattern="\S(.*\S)?"
                                       ref={ (input) => {this.text = input} } />
                         </div>
-                        <button className="btn btn-primary" type="submit">Add New Post</button>
+                        <div className="new-post-button-section">
+                            <Link to="/">
+                                <button className="btn btn-primary cancel">Cancel</button>
+                            </Link>
+                            <button className="btn btn-primary add-post" type="submit">Add New Post</button>
+                        </div>
                     </form>
                 </div>
             </div>

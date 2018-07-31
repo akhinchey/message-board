@@ -16,6 +16,11 @@ textarea {
   margin: 50px auto; 
   border: 1px solid $color-med-grey;
 
+  .new-post-button-section {
+    text-align: right;
+    padding: 20px;
+  }
+
   .short-post-container {
     padding: 10px;
     margin: 10px;
@@ -112,17 +117,21 @@ textarea {
   }
 
   .post-form {
-    width: 70%;
     margin: auto;
 
-    .form-group {
+    form {
+      padding: 20px;
+    }
 
-      
-      &.short-field {
-        float: left;
-        margin-right: 10px;
-        width: 40%;
+    .new-post-button-section {
+      padding: 0;
+
+      button.add-post {
+        margin-left: 20px;
       }
+    }
+
+    .form-group {
       
       &.text-area {
         clear: left
@@ -146,6 +155,10 @@ label {
 @media (max-width: 768px) {
   .post-container {
     width: 90%;
+
+    .new-post-button-section {
+      text-align: center;
+    }
 
     .short-post-container {
       .icon {
@@ -172,7 +185,6 @@ label {
           }
         }
       }
-
     }
 
 
@@ -181,17 +193,26 @@ label {
       font-size: 20px;
     }
 
-    .reply-section .reply-form, .post-form {
+    .reply-section .reply-form {
       width: 90%;
       margin: auto;
     }
 
     .post-form {
       .form-group {
-        &.short-field {
-          float: none;
-          margin-right: 0;
-          width: 100%
+        text-align: center;
+      }
+
+      .new-post-button-section {
+        overflow: auto;
+
+        button.cancel {
+          float: left;
+        }
+
+        button.add-post {
+          margin: 0;
+          float: right;
         }
 
       }

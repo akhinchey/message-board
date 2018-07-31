@@ -8,6 +8,9 @@ textarea {
   width: 80%;
   margin: 50px auto;
   border: 1px solid #ccc; }
+  .post-container .new-post-button-section {
+    text-align: right;
+    padding: 20px; }
   .post-container .short-post-container {
     padding: 10px;
     margin: 10px;
@@ -61,12 +64,13 @@ textarea {
   .post-container .full-post .post-text {
     padding: 20px 0 40px; }
   .post-container .post-form {
-    width: 70%;
     margin: auto; }
-    .post-container .post-form .form-group.short-field {
-      float: left;
-      margin-right: 10px;
-      width: 40%; }
+    .post-container .post-form form {
+      padding: 20px; }
+    .post-container .post-form .new-post-button-section {
+      padding: 0; }
+      .post-container .post-form .new-post-button-section button.add-post {
+        margin-left: 20px; }
     .post-container .post-form .form-group.text-area {
       clear: left; }
 
@@ -81,6 +85,8 @@ label {
 @media (max-width: 768px) {
   .post-container {
     width: 90%; }
+    .post-container .new-post-button-section {
+      text-align: center; }
     .post-container .short-post-container .icon {
       display: none; }
     .post-container .short-post-container .details {
@@ -96,10 +102,15 @@ label {
     .post-container .reply-section .reply-header,
     .post-container .page-title {
       font-size: 20px; }
-    .post-container .reply-section .reply-form, .post-container .post-form {
+    .post-container .reply-section .reply-form {
       width: 90%;
       margin: auto; }
-    .post-container .post-form .form-group.short-field {
-      float: none;
-      margin-right: 0;
-      width: 100%; } }
+    .post-container .post-form .form-group {
+      text-align: center; }
+    .post-container .post-form .new-post-button-section {
+      overflow: auto; }
+      .post-container .post-form .new-post-button-section button.cancel {
+        float: left; }
+      .post-container .post-form .new-post-button-section button.add-post {
+        margin: 0;
+        float: right; } }
