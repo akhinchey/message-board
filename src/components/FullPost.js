@@ -18,7 +18,7 @@ const FullPost = (props) => {
     return (
         <div className="post-container">
             <div className="full-post">
-                <h2 className="post-title">{post.title}</h2>
+                <h1 className="post-title">{post.title}</h1>
                 <div className="post-details">
                     Author: <span className="bold-text">{post.author}</span> at {post.date}
                 </div>

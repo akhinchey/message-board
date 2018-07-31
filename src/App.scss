@@ -7,42 +7,51 @@ a, a:hover {
   text-decoration: none;
 }
 
-nav {
-  margin-bottom: 20px;
-
-  &.nav {
-    display: inline-block;
-  }
-}
-
 textarea {
   resize: none;
 }
 
-.nav-title {
-  float: left;
-  padding: 0 20px;
-  font-size: 25px;
-
-  a {
-    color: $color-grey;
-    text-decoration: none;
-  }
-}
-
-.nav-tabs li a {
-  border-style: none;
-  border-radius: 0;
-
-  &.active {
-    background-color: $color-light-grey;
-  }
-}
-
 .post-container {
   width: 80%;
-  margin: auto;
-  margin-bottom: 50px;  
+  margin: 50px auto; 
+  border: 1px solid $color-med-grey;
+
+  .short-post-container {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid $color-med-grey;
+
+    .details {
+      width: 93%;
+      display: inline-block;
+
+      .label-info {
+        margin-left: 20px;
+        padding: .2em;
+      }
+
+      .post-details {
+        .post-time {
+          float: right;
+        }
+      }
+    }
+
+    .icon {
+      font-size: 35px;
+      float: right;
+    }
+
+    a h2 {
+      display: block;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+    }
+    
+  }
   
   .post-details {
     color: $color-grey;
@@ -77,13 +86,18 @@ textarea {
     }
   }
 
-  .post-title, .page-title {
-    font-size: 20px;
+  .post-title {
+    &.list {
+      font-size: 20px;
+      margin: 0;
+      padding-bottom: 10px;
+    }
   }
 
   .page-title {
     color: $color-grey;
     padding-bottom: 10px;
+    text-align: center;
   }
 
   .full-post {
@@ -133,9 +147,38 @@ label {
   .post-container {
     width: 90%;
 
-    .reply-section .reply-header, .post-title,
+    .short-post-container {
+      .icon {
+        display: none;
+      }
+
+      .details {
+        width: 100%;
+
+        .post-title {
+          &.list {
+            font-size: 15px;
+          }
+        }
+
+        .post-details {
+          font-size: 13px;
+          .label-info {
+            float: right;
+          }
+
+          .post-time {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+
+    .reply-section .reply-header,
     .page-title  {
-      font-size:17px;
+      font-size: 20px;
     }
 
     .reply-section .reply-form, .post-form {

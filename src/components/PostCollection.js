@@ -10,6 +10,7 @@ const PostCollection = (props) => {
 
     return (
         <div className="post-container">
+        <h1 className="page-title">Message Board</h1>
             {shortPosts}
         </div>
     )

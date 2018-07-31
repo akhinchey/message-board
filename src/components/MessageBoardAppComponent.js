@@ -5,7 +5,7 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
-import NavHeader from './NavHeader';
+// import NavHeader from './NavHeader';
 import PostCollection from './PostCollection';
 import NewPostForm from './NewPostForm';
 import FullPost from './FullPost';
@@ -22,7 +22,6 @@ class MessageBoardAppComponent extends React.Component {
         return (
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
                 <ScrollToTop>
-                    <NavHeader />
                     <Switch>
                         <Route exact path="/posts" render={() => <PostCollection posts={this.props.posts} />} />
                         <Route path="/posts/new" render={() => <NewPostForm addNewPost={this.props.addPost} />} />
