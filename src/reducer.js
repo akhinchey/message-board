@@ -8,7 +8,7 @@ import generateCurrentDate from './utils';
 
 
 const initialState = {
-    posts: []
+    posts: starterPosts
 }
 
 const messageBoardReducer = (state = initialState, action) => {
