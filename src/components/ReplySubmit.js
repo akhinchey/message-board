@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ReplySubmit = () => (
     <div className="reply-button">
