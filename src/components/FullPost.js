@@ -24,7 +24,7 @@ const FullPost = (props) => {
                 <div className="post-title-container">
                     <h2 className="post-title">{post.title}</h2>
                     <Link to="/posts">
-                        <span className="btn btn-primary top-back-button">Back To Posts</span>
+                        <button className="btn btn-primary top-back-button">Back To Posts</button>
                     </Link>
                 </div>
                 
@@ -47,7 +47,7 @@ const FullPost = (props) => {
                 <div className="bottom-button-section">
                 <hr />
                     <Link to="/posts">
-                        <span className="btn btn-primary bottom-back-button">Back To Posts</span>
+                        <button className="btn btn-primary bottom-back-button">Back To Posts</button>
                     </Link>
                 </div>
             </div>

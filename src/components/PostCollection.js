@@ -16,7 +16,7 @@ const PostCollection = (props) => {
 
             <div className="new-post-button-section">
                 <Link to="/posts/new">
-                    <span className="btn btn-primary">Add New Post</span>
+                    <button className="btn btn-primary">Add New Post</button>
                 </Link>
             </div>
         </div>

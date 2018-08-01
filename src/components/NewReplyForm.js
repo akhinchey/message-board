@@ -27,7 +27,7 @@ class NewReplyForm extends React.Component {
                                             ref={ (input) => {this.author = input} }/>
                         </div>
                         <div className="form-group">
-                            <label>Reply * :</label>                
+                            <label>Reply * :</label>
                             <textarea required
                                     maxLength="50"
                                     className="form-control"
