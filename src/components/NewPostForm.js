@@ -12,7 +12,7 @@ class NewPostForm extends React.Component {
         let text = this.text.value;
         this.props.addNewPost(title, author, text)
         e.target.reset();
-        const path = "/posts";
+        const path = `/posts/${this.props.postCount + 1}`;
         this.props.history.push(path);
     }
 
