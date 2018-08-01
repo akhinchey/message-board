@@ -22,7 +22,7 @@ To use, simply clone this repo, install the dependencies and run `$ yarn start`
 
 #### Additional Notes:
 
-To better follow the wireframes I added a default component for when there are no posts, but have kept the seed message data as-is. To verify that the app will show this messaging correctly, you can change `line 11` in `src/reducer.js` to:
+To better follow the wireframes I added a default component for when there are no posts, but have kept the seed post data as-is. To verify that the app will show this 'no post' messaging correctly, you can change `line 11` in `src/reducer.js` to:
 
 ```
     posts: []
