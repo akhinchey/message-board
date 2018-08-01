@@ -13,7 +13,7 @@ const PostCollection = (props) => {
 
     return (
         <div className="post-container">
-            <h1 className="page-title">Message Board</h1>
+            <h1 className="page-title">Kitty Message Board</h1>
             <InitialMessage messages={props.posts.length} />
             {shortPosts}
 

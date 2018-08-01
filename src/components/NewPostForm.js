@@ -25,22 +25,22 @@ class NewPostForm extends React.Component {
 
                     <form onSubmit={this.handleSubmit}>
 
-                            <label>Title * :</label>
+                            <label>Title:</label>
                             <input required type="text"
                                             className="form-control"
                                             pattern="\S(.*\S)?"
                                             ref={ (input) => {this.title = input} }/>
-                            <label>Author * :</label>
+                            <label>Post:</label>                
+                            <textarea required className="form-control"
+                                               rows="4"
+                                               pattern="\S(.*\S)?"
+                                               ref={ (input) => {this.text = input} } />
+                            <label>Author:</label>
                             <input required type="text"
                                             maxLength="50"
                                             className="form-control"
                                             pattern="\S(.*\S)?"
                                             ref={ (input) => {this.author = input} }/>
-                            <label>Post * :</label>                
-                            <textarea required className="form-control"
-                                               rows="4"
-                                               pattern="\S(.*\S)?"
-                                               ref={ (input) => {this.text = input} } />
                     <PostSubmit />
                     </form>
                 </div>

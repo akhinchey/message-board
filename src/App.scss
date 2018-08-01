@@ -78,7 +78,6 @@ textarea {
 
   .reply-section {
     padding: 20px;
-    // margin-bottom: 50px;
 
     .reply-header {
       color: $color-grey;
@@ -111,6 +110,8 @@ textarea {
       width: 30%;
       display: inline-block;
       text-align: center;
+      vertical-align: top;
+      margin-top: 60px;
 
         button {
           width: 70%;
@@ -163,7 +164,7 @@ textarea {
     }
 
     .new-post-button-section {
-      padding: 20px 0 0;
+      padding: 40px 0 20px;
 
       button.add-post {
         margin-left: 20px;
@@ -237,15 +238,17 @@ label {
       .reply-form-fields, .reply-button {
         display: block;
         width: 100%;
+        margin-top: 20px;
 
         button {
-          margin-top: 20px;
           width: 100%;
         }
       }
     }
 
     .post-form {
+      text-align: center;
+
       .form-group {
         text-align: center;
       }
