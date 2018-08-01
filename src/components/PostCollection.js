@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ShortPost from './ShortPost';
 import NavButton from './NavButton';
+import InitialMessage from './InitialMessage';
 
 
 const PostCollection = (props) => {
@@ -13,6 +14,7 @@ const PostCollection = (props) => {
     return (
         <div className="post-container">
             <h1 className="page-title">Message Board</h1>
+            <InitialMessage messages={props.posts.length} />
             {shortPosts}
 
             <div className="new-post-button-section">
