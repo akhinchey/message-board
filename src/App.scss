@@ -127,6 +127,7 @@ textarea {
   }
 
   .full-post {
+    border-bottom: 1px solid $color-med-grey;    
 
     .post-title-container {
       .post-title {
@@ -144,7 +145,7 @@ textarea {
 
 
     .post-text {
-      padding: 20px 0 40px;
+      padding: 20px 0;
     }
   }
 
@@ -156,7 +157,7 @@ textarea {
     }
 
     .new-post-button-section {
-      padding: 0;
+      padding: 20px 0 0;
 
       button.add-post {
         margin-left: 20px;
@@ -187,6 +188,7 @@ label {
 @media (max-width: 768px) {
   .post-container {
     width: 90%;
+    margin: 20px auto;
 
     .new-post-button-section {
       text-align: center;
@@ -231,6 +233,7 @@ label {
         width: 100%;
 
         button {
+          margin-top: 20px;
           width: 100%;
         }
       }

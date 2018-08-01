@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReplySubmit from './ReplySubmit';
 
 class NewReplyForm extends React.Component {
 
@@ -18,27 +18,19 @@ class NewReplyForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
 
                     <div className="reply-form-fields">
-                        <div className="form-group">
-                            <label>Name * :</label>
-                            <input type="text" required
-                                            maxLength="50"
-                                            className="form-control"
-                                            pattern="\S(.*\S)?"
-                                            ref={ (input) => {this.author = input} }/>
-                        </div>
-                        <div className="form-group">
-                            <label>Reply * :</label>
-                            <textarea required
-                                    maxLength="50"
-                                    className="form-control"
-                                    pattern="\S(.*\S)?"
-                                    ref={ (input) => {this.text = input} } />
-                        </div>
+                        <label>Name * :</label>
+                        <input type="text" required maxLength="50"
+                                                    className="form-control"
+                                                    pattern="\S(.*\S)?"
+                                                    ref={ (input) => {this.author = input} }/>
+                        <label>Reply * :</label>
+                        <textarea required maxLength="50"
+                                           className="form-control"
+                                           pattern="\S(.*\S)?"
+                                           ref={ (input) => {this.text = input} } />
                     </div>
 
-                    <div className="reply-button">
-                        <button className="btn btn-primary" type="submit">Post Reply</button>
-                    </div>
+                    <ReplySubmit />
                 </form>
             </div>
         )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import PostSubmit from './PostSubmit';
 
 
 class NewPostForm extends React.Component {
@@ -23,35 +24,24 @@ class NewPostForm extends React.Component {
                     <h1 className="page-title">Add A New Post</h1>
 
                     <form onSubmit={this.handleSubmit}>
-                        <div className="form-group">
+
                             <label>Title * :</label>
-                            <input type="text"
-                                   required className="form-control"
-                                   pattern="\S(.*\S)?"
-                                   ref={ (input) => {this.title = input} }/>
-                        </div>
-                        <div className="form-group">
+                            <input required type="text"
+                                            className="form-control"
+                                            pattern="\S(.*\S)?"
+                                            ref={ (input) => {this.title = input} }/>
                             <label>Author * :</label>
-                            <input type="text"
-                                   maxlength="50"
-                                   required className="form-control"
-                                   pattern="\S(.*\S)?"
-                                   ref={ (input) => {this.author = input} }/>
-                        </div>
-                        <div className="form-group text-area">
+                            <input required type="text"
+                                            maxLength="50"
+                                            className="form-control"
+                                            pattern="\S(.*\S)?"
+                                            ref={ (input) => {this.author = input} }/>
                             <label>Post * :</label>                
-                            <textarea required 
-                                      className="form-control"
-                                      rows="4"
-                                      pattern="\S(.*\S)?"
-                                      ref={ (input) => {this.text = input} } />
-                        </div>
-                        <div className="new-post-button-section">
-                            <Link to="/posts">
-                                <button className="btn btn-primary cancel">Cancel</button>
-                            </Link>
-                            <button className="btn btn-primary add-post" type="submit">Add New Post</button>
-                        </div>
+                            <textarea required className="form-control"
+                                               rows="4"
+                                               pattern="\S(.*\S)?"
+                                               ref={ (input) => {this.text = input} } />
+                    <PostSubmit />
                     </form>
                 </div>
             </div>

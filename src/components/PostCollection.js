@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ShortPost from './ShortPost';
+import NavButton from './NavButton';
 
 
 const PostCollection = (props) => {
@@ -16,7 +17,7 @@ const PostCollection = (props) => {
 
             <div className="new-post-button-section">
                 <Link to="/posts/new">
-                    <button className="btn btn-primary">Add New Post</button>
+                    <NavButton buttonText={"Add New Post"}/>
                 </Link>
             </div>
         </div>
